@@ -1,0 +1,16 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.chiswickcinema.co.uk/wp-content/uploads/2021/05/Untitled-design-22.jpg);">
+  <div class="container">
+    <h1>Save your <strong>Favourite Movies</strong> to <strong>A LIST</strong></h1>
+    <p>That's it</p>
+    <%= link_to "New List", new_list_path, class:"btn-flat" %>
+  </div>
+</div>
+
+<% @lists.each do |l| %>
+<div class="card-product">
+  <div class="card-product-infos">
+    <h2><%= link_to l.name, list_path(l.id) %></h2>
+  </div>
+</div>
+<% end %>

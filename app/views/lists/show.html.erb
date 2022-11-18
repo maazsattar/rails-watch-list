@@ -1,0 +1,12 @@
+<h1><%= @list.name.capitalize %></h1>
+<% @list.bookmarks.each do |b| %>
+<div class="card-product">
+  <%= image_tag(b.movie.poster_url, class: "img") %>
+  <div class="card-product-infos">
+    <h2><%= b.movie.title %></h2>
+    <p><%= b.movie.overview %></p>
+  </div>
+</div>
+<% end %>
+<br>
+<%= link_to "Back", lists_path, class: "btn-flat" %>
